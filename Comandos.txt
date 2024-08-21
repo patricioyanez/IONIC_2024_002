@@ -1,0 +1,28 @@
+Prender equipo (computador, notebook u otro similar)
+Usar CMD
+
+1.- descargar node.js  (20.16.0 año  2024)
+    https://nodejs.org/en
+
+    Para ver la versión del node
+    node --version
+
+
+2.- instalar ionic
+    npm install -g @ionic/cli
+
+    Para ver la versión de ionic
+    ionic --version
+
+    Si esta instalado actualizar con:
+    npm install -g @ionic/cli --force 
+
+    Ultima versión 7.2.0    año 2024
+    
+3.- Crear proyecto
+    ionic start NOMBREDELPROYECTO blank
+
+    ingresar a la carpeta del proyecto
+    ejecutar: ionic serve
+
+    
