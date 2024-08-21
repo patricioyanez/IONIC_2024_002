@@ -25,4 +25,6 @@ Usar CMD
     ingresar a la carpeta del proyecto
     ejecutar: ionic serve
 
-    
+4.- Crear una nueva pagina
+    ionic generate 
+    seleccionar PAGE
