@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <input type="number" [(ngModel)]="numero1"><br>
+  <ion-button (click)="abrirPagina()">
+    <ion-icon slot="icon-only" name="arrow-redo-outline"></ion-icon>
+    Usando Navigate
+  </ion-button>
+  <ion-button (click)="abrirPagina2()">
+    <ion-icon slot="icon-only" name="arrow-redo-outline"></ion-icon>
+    Usando Navigate by Url
+  </ion-button>
+</ion-content>
