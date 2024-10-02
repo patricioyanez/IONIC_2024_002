@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'segunda/:id',
+    loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
+  },
+  {
     path: 'segunda',
     loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
   },

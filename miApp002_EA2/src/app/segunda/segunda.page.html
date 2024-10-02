@@ -1,13 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>segunda</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">segunda</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-text color="primary">
+    <h1>El valor recibido por la url es: {{ valorParametro1 }}</h1>
+  </ion-text>
+  <ion-text color="danger">
+    <h1>El valor recibido parametro es: {{ valorParametro2 }}</h1>
+  </ion-text>
 </ion-content>
