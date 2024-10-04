@@ -1,13 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>tercera</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tercera</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1 color="danger" *ngIf="!personas"> No hay registros</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let persona of personas" [routerLink]="['/tercera-detalle/' + persona.id ]">
+      <ion-avatar slot="start">
+        <img [src]="persona.foto" />
+      </ion-avatar>
+      <ion-label>{{ persona.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

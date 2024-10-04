@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'tercera',
     loadChildren: () => import('./tercera/tercera.module').then( m => m.TerceraPageModule)
   },
+  {
+    path: 'tercera-detalle/:id',
+    loadChildren: () => import('./tercera-detalle/tercera-detalle.module').then( m => m.TerceraDetallePageModule)
+  },
 ];
 
 @NgModule({

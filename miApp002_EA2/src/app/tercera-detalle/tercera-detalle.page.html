@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tercera"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img src="{{persona.foto}}">
+    <ion-card-header>
+      <ion-card-subtitle>Nombre</ion-card-subtitle>
+      <ion-card-title>{{persona.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Edad: {{persona.edad}}<br>
+      id: {{persona.id}}
+    </ion-card-content>
+  </ion-card>
+<!-- Ejercicio 24: agregar 2 botones (me gusta o no) y enviar mensaje usando
+ alert y toast
+  -->
+</ion-content>
