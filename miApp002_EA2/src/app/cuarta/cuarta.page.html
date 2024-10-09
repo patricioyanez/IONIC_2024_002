@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cuarta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="3">Id</ion-col>
+    <ion-col size="9">
+      <ion-input type="number" placeholder="Ingrese id del usuario" [(ngModel)]="id"></ion-input> 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="3">Nombre</ion-col>
+    <ion-col size="9">
+      <ion-input type="text" placeholder="Ingrese nombre del usuario" [(ngModel)]="nombre"></ion-input> 
+    </ion-col>
+  </ion-row><ion-row>
+    <ion-col size="3">Opciones</ion-col>
+    <ion-col size="9">
+      <ion-button (click)="limpiar()" color="secondary">
+        <ion-icon slot="start" name="trash"></ion-icon>
+        Limpiar
+      </ion-button>
+      <ion-button (click)="guardar()" color="danger">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Guardar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
