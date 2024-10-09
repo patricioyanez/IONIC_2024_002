@@ -11,5 +11,8 @@ export class QuintaPage implements OnInit {
 
   ngOnInit() {
   }
-
+  guardar()
+  {
+    
+  }
 }
