@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'cuarta',
     loadChildren: () => import('./cuarta/cuarta.module').then( m => m.CuartaPageModule)
   },
+  {
+    path: 'quinta',
+    loadChildren: () => import('./quinta/quinta.module').then( m => m.QuintaPageModule)
+  },
 ];
 
 @NgModule({

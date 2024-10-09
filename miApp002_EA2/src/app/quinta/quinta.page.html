@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>quinta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1>Crear formulario con : rut, nombre, direccion, correo, telefono, año
+  nacimiento
+</h1>
+<ion-item>
+  <ion-label position="floating">Rut</ion-label>
+  <ion-input type="text" [(ngModel)]="persona.rut"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input type="text" [(ngModel)]="persona.nombre"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Dirección</ion-label>
+  <ion-input type="text" [(ngModel)]="persona.direccion"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Correo</ion-label>
+  <ion-input type="email" [(ngModel)]="persona.correo"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Teléfono</ion-label>
+  <ion-input type="text" [(ngModel)]="persona.telefono"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Año Nacimiento</ion-label>
+  <ion-input type="number" [(ngModel)]="persona.anio"></ion-input>
+</ion-item>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button><ion-icon name="menu"></ion-icon></ion-fab-button>
+  <ion-fab-list side="start">
+    <ion-fab-button><ion-icon name="save"></ion-icon></ion-fab-button>
+    <ion-fab-button><ion-icon name="close"></ion-icon></ion-fab-button>
+    <ion-fab-button><ion-icon name="search"></ion-icon></ion-fab-button>
+    <ion-fab-button><ion-icon name="list"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+</ion-content>
