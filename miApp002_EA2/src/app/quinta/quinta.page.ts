@@ -82,4 +82,17 @@ export class QuintaPage implements OnInit {
   Ejercicio 23: Agregar el boton eliminar
 
   */
+  async eliminar(){
+    this.crudService.eliminar(this.persona.rut);
+    const toast = await this.toastController.create({
+      header  : "Resultado",
+      message : "El rut " + this.persona.rut + " fue eliminado." ,
+      icon    : 'trash-outline',
+      color   : 'success',
+      duration: 2000,
+      position: 'middle'
+    });
+    await toast.present();
+    this.limpiar();
+  }
 }
