@@ -58,6 +58,10 @@ export class QuintaPage implements OnInit {
         this.limpiar();
       }
   }
+  async leer()
+  {
+    this.persona = await this.crudService.leer(this.persona.rut);
+  }
   limpiar(){
     this.persona = [];
     const input = document.querySelector('ion-input');
@@ -74,5 +78,8 @@ export class QuintaPage implements OnInit {
     });
     await alerta.present();
   }
+  /*
+  Ejercicio 23: Agregar el boton eliminar
 
+  */
 }
