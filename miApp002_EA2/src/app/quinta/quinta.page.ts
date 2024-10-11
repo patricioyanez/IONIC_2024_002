@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from './crud.service';
-
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quinta',
@@ -9,11 +9,14 @@ import { CrudService } from './crud.service';
 })
 export class QuintaPage implements OnInit {
   persona:any = [];
-  constructor(private crudService:CrudService) { }
+  constructor(private crudService:CrudService,
+              private alertController: AlertController,
+              private toastController: ToastController
+  ) { }
 
   ngOnInit() {
   }
-  guardar()
+  async guardar()
   {
     // Ejercicio 22: validar que los datos no esten en blanco
     if(this.persona.rut == null)
@@ -43,6 +46,27 @@ export class QuintaPage implements OnInit {
       else
       {
         this.crudService.guardar(this.persona.rut, this.persona);
+        const toast = await this.toastController.create({
+          header  : "Resultado",
+          message : "Datos Guardados",
+          icon    : 'checkmark-circle-outline',
+          color   : 'success',
+          duration: 2000,
+          position: 'middle'
+        });
+        await toast.present();
       }
   }
+
+  async mensajeDeError(mensaje:string)
+  {
+    const alerta = await this.alertController.create({
+      header    : "Error",
+      subHeader : "Mensaje del error",
+      message   : mensaje,
+      buttons   : ['Aceptar']
+    });
+    await alerta.present();
+  }
+
 }
