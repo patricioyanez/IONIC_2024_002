@@ -33,13 +33,22 @@
   <ion-input type="number" [(ngModel)]="persona.anio"></ion-input>
 </ion-item>
 
+<ion-grid fixed *ngIf="personas">
+  <ion-row *ngFor="let p of personas">
+    <ion-col size="3">{{p.rut}}</ion-col>
+    <ion-col size="3">{{p.nombre}}</ion-col>
+    <ion-col size="3">{{p.correo}}</ion-col>
+    <ion-col size="3">{{p.telefono}}</ion-col>
+  </ion-row>
+</ion-grid>
+
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
   <ion-fab-button><ion-icon name="menu"></ion-icon></ion-fab-button>
   <ion-fab-list side="start">
     <ion-fab-button (click)="guardar()"><ion-icon name="save"></ion-icon></ion-fab-button>
     <ion-fab-button (click)="eliminar()"><ion-icon name="trash"></ion-icon></ion-fab-button>
     <ion-fab-button (click)="leer()"><ion-icon name="search"></ion-icon></ion-fab-button>
-    <ion-fab-button><ion-icon name="list"></ion-icon></ion-fab-button>
+    <ion-fab-button (click)="listar()"><ion-icon name="list"></ion-icon></ion-fab-button>
     <ion-fab-button (click)="limpiar()"><ion-icon name="backspace"></ion-icon></ion-fab-button>
   </ion-fab-list>
 </ion-fab>

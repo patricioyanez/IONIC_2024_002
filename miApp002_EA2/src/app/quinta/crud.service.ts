@@ -14,6 +14,7 @@ export class CrudService {
   async leer(id: string)
   {
     let temp = localStorage.getItem(id);
+
     if(temp != null)
       return JSON.parse(temp);
     else
@@ -25,10 +26,12 @@ export class CrudService {
   }
   async listar()
   {
-
+    let listado : any = [];
+    for(let i=0; i < localStorage.length; i++)
+    {
+      listado[i] = JSON.parse(""+localStorage.getItem("" + localStorage.key(i)));
+    }
+    return listado;
   }
-  async buscarPorRut(rut:string)
-  {
 
-  }
 }

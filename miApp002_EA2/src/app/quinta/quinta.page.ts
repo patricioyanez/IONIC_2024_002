@@ -9,6 +9,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class QuintaPage implements OnInit {
   persona:any = [];
+  personas: any = [];
   constructor(private crudService:CrudService,
               private alertController: AlertController,
               private toastController: ToastController
@@ -64,6 +65,7 @@ export class QuintaPage implements OnInit {
   }
   limpiar(){
     this.persona = [];
+    this.personas=[];
     const input = document.querySelector('ion-input');
     if(input != null)
       input.setFocus();
@@ -102,4 +104,8 @@ export class QuintaPage implements OnInit {
   storage
 
   */
+  async listar()
+  {
+    this.personas = await this.crudService.listar();
+  }
 }
