@@ -55,9 +55,15 @@ export class QuintaPage implements OnInit {
           position: 'middle'
         });
         await toast.present();
+        this.limpiar();
       }
   }
-
+  limpiar(){
+    this.persona = [];
+    const input = document.querySelector('ion-input');
+    if(input != null)
+      input.setFocus();
+  }
   async mensajeDeError(mensaje:string)
   {
     const alerta = await this.alertController.create({
