@@ -95,4 +95,11 @@ export class QuintaPage implements OnInit {
     await toast.present();
     this.limpiar();
   }
+
+  
+  /*
+  Ejercicio 24: Listar todos los elementos guardados en el
+  storage
+
+  */
 }
