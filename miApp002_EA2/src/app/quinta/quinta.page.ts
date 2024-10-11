@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from './crud.service';
+
 
 @Component({
   selector: 'app-quinta',
@@ -7,12 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuintaPage implements OnInit {
   persona:any = [];
-  constructor() { }
+  constructor(private crudService:CrudService) { }
 
   ngOnInit() {
   }
   guardar()
   {
-    
+    // Ejercicio 22: validar que los datos no esten en blanco
+    if(this.persona.rut == null)
+      {
+        this.mensajeDeError('Falta especificar el rut');
+      }
+      else if(this.persona.nombre == null)
+      {
+        this.mensajeDeError('Falta especificar el nombre');
+      }
+      else if(this.persona.direccion == null)
+      {
+        this.mensajeDeError('Falta especificar la dirección');
+      }
+      else if(this.persona.correo == null)
+      {
+        this.mensajeDeError('Falta especificar el correo');
+      }
+      else if(this.persona.telefono == null)
+      {
+        this.mensajeDeError('Falta especificar el teléfono');
+      }
+      else if(this.persona.anio == null || this.persona.anio < 1900)
+      {
+        this.mensajeDeError('El año ingresado no es correcto');
+      }
+      else
+      {
+        this.crudService.guardar(this.persona.rut, this.persona);
+      }
   }
 }
