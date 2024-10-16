@@ -1,3 +1,8 @@
+/**
+ * importa el modulo
+ * HttpClientModule en el archivo app.module.ts
+ */
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
