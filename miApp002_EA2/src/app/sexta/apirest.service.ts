@@ -5,6 +5,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 
 
 @Injectable({
@@ -17,11 +18,14 @@ export class ApirestService {
 
   constructor(private httpClient:HttpClient) { }
 /* Ejercicio 26: mostrar la información de los usuarios en la pagina sexta  */
-  getUsers()
+  async getUsers()
   {
     const ruta = this.urlBase + 'users';
-    this.httpClient.get(ruta).subscribe((data=[])=> {this.listado = data });
-    return this.listado;
+    return await firstValueFrom(this.httpClient.get(ruta));
+  } 
+  async getPosts(id:string)
+  {
+    const ruta = this.urlBase + 'users/' + id +'/posts';
+    return await firstValueFrom(this.httpClient.get(ruta));
   }
-
 }

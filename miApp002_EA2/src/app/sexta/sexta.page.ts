@@ -13,8 +13,15 @@ export class SextaPage implements OnInit {
   ngOnInit() {
     this.listar();
   }
+  /* Ejercicio 26: mostrar la información de los usuarios en la pagina sexta  
+  id, nombre, nombre de usuario y correo.
+  list e Item
+*/
   async listar()
   {
     this.listado = await this.apirestService.getUsers();
   }
+ /*
+    Ejercicio 27: Desplegar los post del usuario seleccionado
+  */
 }
