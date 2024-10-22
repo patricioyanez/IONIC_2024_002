@@ -23,5 +23,6 @@ export class SextaPage implements OnInit {
   }
  /*
     Ejercicio 27: Desplegar los post del usuario seleccionado
+    sextaposts
   */
 }
