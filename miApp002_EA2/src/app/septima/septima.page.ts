@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeptimaPage implements OnInit {
 /*
+crear QR: LEER septima.module
+*/
+
+/*
   ejercicio de investigación 28: buscar e integrar libreria para lectura de QR
   al leer, mostrar la información en un text o label.
 
@@ -19,6 +23,7 @@ pc y android
 
 
 */
+ valor:any= 'valor';
   constructor() { }
 
   ngOnInit() {

@@ -7,9 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SeptimaPageRoutingModule } from './septima-routing.module';
 
 import { SeptimaPage } from './septima.page';
+/*
+https://www.npmjs.com/package/angularx-qrcode
 
+npm install angularx-qrcode --save
+ojo con la version de angular
+*/
+import { QRCodeModule } from 'angularx-qrcode';
 @NgModule({
-  imports: [
+  imports: [QRCodeModule,
     CommonModule,
     FormsModule,
     IonicModule,

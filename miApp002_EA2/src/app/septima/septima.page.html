@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">septima</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<h1>Crear QR</h1>
+<input type="text" [(ngModel)]="valor">
+<br>
+<!--- crear QR: LEER septima.module  -->
+<qrcode [qrdata]="valor" [width]="400"></qrcode>
 </ion-content>
