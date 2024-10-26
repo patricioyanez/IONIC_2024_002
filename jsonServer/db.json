@@ -1,0 +1,61 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "correo": "ju@correo.cl",
+      "clave": "1234"
+    },
+    {
+      "id": "2",
+      "nombre": "Ana",
+      "correo": "an@correo.cl",
+      "clave": "1234"
+    },
+    {
+      "id": "3",
+      "nombre": "Luis",
+      "correo": "lu@correo.cl",
+      "clave": "1234"
+    },
+    {
+      "id": "4",
+      "nombre": "Carlos",
+      "correo": "ca@correo.cl",
+      "clave": "1234"
+    },
+    {
+      "id": "5",
+      "nombre": "Pedro",
+      "correo": "pe@correo.cl",
+      "clave": "1234"
+    }
+  ],
+  "Sedes": [
+    {
+      "id": "100",
+      "nombre": "Plaza Oeste",
+      "habilitado": 1
+    },
+    {
+      "id": "101",
+      "nombre": "Plaza Norte",
+      "habilitado": 1
+    },
+    {
+      "id": "102",
+      "nombre": "Plaza Vespucio",
+      "habilitado": 1
+    },
+    {
+      "id": "110",
+      "nombre": "sede fake",
+      "habilitado": 1
+    },
+    {
+      "id": "210",
+      "nombre": "sede fake 2",
+      "habilitado": 1
+    }
+  ]
+}
