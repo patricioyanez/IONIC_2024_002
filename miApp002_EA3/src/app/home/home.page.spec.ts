@@ -19,4 +19,7 @@ describe('HomePage ts: ', () => {
   it('suma 2 numeros, 1 es negativo', () => {
     expect(component.sumar(10,-15)).toBeLessThanOrEqual(0);
   });
+  it('suma 2 numeros, ambos positivos', () => {
+    expect(component.sumar(10,1)).toBeGreaterThanOrEqual(11);
+  });
 });
