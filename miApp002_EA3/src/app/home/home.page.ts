@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-  // crear los metodos multiplicar y restar
+  // crear los metodos dividir, multiplicar y restar
 // aplicar 4 test a cada metodos
 
 // https://www.youtube.com/watch?v=7E0tP7H550g&list=PLk2rufbc0DMqL8Vx1zbQdTYqVwM5LjZnb&index=12

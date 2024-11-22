@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-input type="text" id="n1" placeholder="Número 1" [(ngModel)]="n1"></ion-input><br>
+  <ion-input type="text" id="n2" placeholder="Número 2" [(ngModel)]="n2"></ion-input><br>
+  <ion-input type="text" id="res" placeholder="Resultado" [(ngModel)]="res"></ion-input><br>
+<ion-button id="sumar" (click)="sumar()" expand="block" fill="outline" shape="round">Sumar</ion-button>
+
+</ion-content>

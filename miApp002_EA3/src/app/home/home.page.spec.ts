@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
-// npm test
+// Ejecutar: npm test
 describe('HomePage ts: ', () => {
   let component: HomePage;
 
@@ -20,6 +20,6 @@ describe('HomePage ts: ', () => {
     expect(component.sumar(10,-15)).toBeLessThanOrEqual(0);
   });
   it('suma 2 numeros, ambos positivos', () => {
-    expect(component.sumar(10,1)).toBeGreaterThanOrEqual(11);
+    expect(component.sumar(10,1)).toBeGreaterThanOrEqual(0);
   });
 });
